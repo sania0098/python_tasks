@@ -90,39 +90,56 @@
 #         vacancy+=1
 # print("the vacancy is ",vacancy)
 
-#########################################
-building_num = 3
-floor_num = 15
-rooms_num = 20
+# #########################################
+# building_num = 3
+# floor_num = 15
+# rooms_num = 20
+#
+#
+# rooms = []
+# for t in range(building_num):
+#     building = []
+#     for f in range(floor_num):
+#         floor = [False for _ in range(rooms_num)]
+#         building.append(floor)
+#     rooms.append(building)
 
 
-rooms = []
-for t in range(building_num):
-    building = []
-    for f in range(floor_num):
-        floor = [False for _ in range(rooms_num)]
-        building.append(floor)
-    rooms.append(building)
-
-
-rooms[2][14][2] = True
-rooms[2][14][4] = True
-rooms[2][14][7] = True
-
-
-vacancy = 0
-for i in range(rooms_num):
-    if not rooms[2][14][i]:
-        vacancy += 1
-
-print("The vacancy is", vacancy)
-
-
-
+# rooms[2][14][2] = True
+# rooms[2][14][4] = True
+# rooms[2][14][7] = True
+#
+#
+# vacancy = 0
+# for i in range(rooms_num):
+#     if not rooms[2][14][i]:
+#         vacancy += 1
+#
+# print("The vacancy is", vacancy)
 
 
 
+# list1=[1,2,3]
+# list2=[]
+# for v in list1:
+#     list2.insert(0,v)
+# print(list2)
+#
+# y=2+3*5.
+# print(y)
 
 
+##################Supersede########
+# import math
+# from math import pi
+# result=pi
+# print(result)
+# pi=2.3
+# print(pi)
 
+import math
+
+
+for name in dir(math):
+    print(name, end="\t")
 
