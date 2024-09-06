@@ -5,73 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a417451f-e3f1-412f-ba61-abb4f2336c7b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/my_Django_project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/myapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/myapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/myapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/myapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/myapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/myapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/myapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/my_Django_project/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/static/myapp/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/static/myapp/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/templates/myapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_Django_project/myapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/1st/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/1st/module.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/4fih_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/Djando.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/about_dictionary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/eception.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/good/alpha.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/good/best/newfile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/good/best/sigma.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/good/best/tau.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/good/beta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/iota.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/iotamain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/ugly/omega.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/extra/ugly/psi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/folders/folder1/student_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/folders/folder2/teacher_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/folders/folders_main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/library_management/data/books.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/library_management/library/add_book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/library_management/library/borrow_book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/library_management/library/return_book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/library_management/library/view_books.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/library_management/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/recursion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/return_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/task11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/tic tac toe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject_task_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject_task_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/task14.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/inventory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navttc_class_tasks/data_science_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/navttc_class_tasks/data_science_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navttc_class_tasks/lists_in_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/navttc_class_tasks/lists_in_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navttc_class_tasks/task10.py" beforeDir="false" afterPath="$PROJECT_DIR$/navttc_class_tasks/task10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/invention.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,54 +41,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.about_dictionary.executor": "Run",
-    "Python.add_book.executor": "Run",
-    "Python.camparison_of_values.executor": "Run",
-    "Python.car_liecence_detection.executor": "Run",
-    "Python.data_science_task.executor": "Run",
-    "Python.diff_shape_arrows.executor": "Run",
-    "Python.eception.executor": "Run",
-    "Python.examples.executor": "Run",
-    "Python.folders_main.executor": "Run",
-    "Python.for loop.executor": "Run",
-    "Python.funjction.executor": "Run",
-    "Python.iota.executor": "Run",
-    "Python.iotamain.executor": "Run",
-    "Python.list.executor": "Run",
-    "Python.lists_in_list.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main (2).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.mobile pakages demo.executor": "Run",
-    "Python.module.executor": "Run",
-    "Python.object_detection.executor": "Run",
-    "Python.object_detection_task2.executor": "Run",
-    "Python.password_checking.executor": "Run",
-    "Python.recursion.executor": "Run",
-    "Python.return_function (1).executor": "Run",
-    "Python.scratch.executor": "Run",
-    "Python.sort_list.executor": "Run",
-    "Python.ssd_coco.executor": "Run",
-    "Python.student_data.executor": "Run",
-    "Python.task10.executor": "Run",
-    "Python.task3.executor": "Run",
-    "Python.task4.executor": "Run",
-    "Python.task5.executor": "Run",
-    "Python.task6.executor": "Run",
-    "Python.task7.executor": "Run",
-    "Python.task_1.executor": "Run",
-    "Python.task_8.executor": "Run",
-    "Python.teacher_data.executor": "Run",
-    "Python.tic tac toe.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Hp/pythonProject_task_1/my_Django_project/myapp",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.about_dictionary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.add_book.executor&quot;: &quot;Run&quot;,
+    &quot;Python.borrow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.camparison_of_values.executor&quot;: &quot;Run&quot;,
+    &quot;Python.car_liecence_detection.executor&quot;: &quot;Run&quot;,
+    &quot;Python.classes (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_science_task.executor&quot;: &quot;Run&quot;,
+    &quot;Python.diff_shape_arrows.executor&quot;: &quot;Run&quot;,
+    &quot;Python.eception.executor&quot;: &quot;Run&quot;,
+    &quot;Python.examples.executor&quot;: &quot;Run&quot;,
+    &quot;Python.folders_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.for loop.executor&quot;: &quot;Run&quot;,
+    &quot;Python.funjction.executor&quot;: &quot;Run&quot;,
+    &quot;Python.iota.executor&quot;: &quot;Run&quot;,
+    &quot;Python.iotamain.executor&quot;: &quot;Run&quot;,
+    &quot;Python.list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lists_in_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mobile pakages demo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.module.executor&quot;: &quot;Run&quot;,
+    &quot;Python.object_detection.executor&quot;: &quot;Run&quot;,
+    &quot;Python.object_detection_task2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.password_checking.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
+    &quot;Python.return_function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sort_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ssd_coco.executor&quot;: &quot;Run&quot;,
+    &quot;Python.student_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task10.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task12.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task13.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task14.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task15.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task16.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task7.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task_8.executor&quot;: &quot;Run&quot;,
+    &quot;Python.teacher_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tic tac toe.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/pythonProject_task_1/my_Django_project/myapp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Hp\pythonProject_task_1\my_Django_project\myapp" />
@@ -161,8 +108,8 @@
       <recent name="C:\Users\Hp\pythonProject_task_1\navttc_class_tasks\folder1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration name="folders_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.task15">
+    <configuration name="classes (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,11 +118,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks/folders" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/folders/folders_main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/classes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,7 +131,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="iota" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="classes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,11 +140,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks/extra" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/extra/iota.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Hp\pythonProject_task_1\navttc_class_tasks\classes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -206,7 +153,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="iotamain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="task14" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,11 +162,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks/extra" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/extra/iotamain.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task14.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,7 +175,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="task15" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -237,11 +184,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/newlibrarymanagmentproject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newlibrarymanagmentproject/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task15.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -250,7 +197,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="task16" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -259,11 +206,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/newlibrarymanagmentproject/main_directory" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Hp\pythonProject_task_1\newlibrarymanagmentproject\main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task16.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -274,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.iotamain" />
-        <item itemvalue="Python.iota" />
-        <item itemvalue="Python.folders_main" />
+        <item itemvalue="Python.task15" />
+        <item itemvalue="Python.task16" />
+        <item itemvalue="Python.classes (1)" />
+        <item itemvalue="Python.classes" />
+        <item itemvalue="Python.task14" />
       </list>
     </recent_temporary>
   </component>
