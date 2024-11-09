@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a417451f-e3f1-412f-ba61-abb4f2336c7b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/task14.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/inventory.py" afterDir="false" />
+    <list default="true" id="a417451f-e3f1-412f-ba61-abb4f2336c7b" name="Changes" comment="CONCEPT OF STACK">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/invention.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navttc_class_tasks/task19.py" beforeDir="false" afterPath="$PROJECT_DIR$/navttc_class_tasks/task19.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +23,20 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/navttc_class_tasks" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sania0098&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sania0098/python_tasks.git&quot;,
+    &quot;accountId&quot;: &quot;60e5846e-2399-4391-bac2-61b236e9b56d&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/navttc_class_tasks/car_liecence_detection.py" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -41,65 +49,78 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.about_dictionary.executor&quot;: &quot;Run&quot;,
-    &quot;Python.add_book.executor&quot;: &quot;Run&quot;,
-    &quot;Python.borrow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.camparison_of_values.executor&quot;: &quot;Run&quot;,
-    &quot;Python.car_liecence_detection.executor&quot;: &quot;Run&quot;,
-    &quot;Python.classes (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_science_task.executor&quot;: &quot;Run&quot;,
-    &quot;Python.diff_shape_arrows.executor&quot;: &quot;Run&quot;,
-    &quot;Python.eception.executor&quot;: &quot;Run&quot;,
-    &quot;Python.examples.executor&quot;: &quot;Run&quot;,
-    &quot;Python.folders_main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.for loop.executor&quot;: &quot;Run&quot;,
-    &quot;Python.funjction.executor&quot;: &quot;Run&quot;,
-    &quot;Python.iota.executor&quot;: &quot;Run&quot;,
-    &quot;Python.iotamain.executor&quot;: &quot;Run&quot;,
-    &quot;Python.list.executor&quot;: &quot;Run&quot;,
-    &quot;Python.lists_in_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mobile pakages demo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module.executor&quot;: &quot;Run&quot;,
-    &quot;Python.object_detection.executor&quot;: &quot;Run&quot;,
-    &quot;Python.object_detection_task2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.password_checking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.return_function (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sort_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ssd_coco.executor&quot;: &quot;Run&quot;,
-    &quot;Python.student_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task10.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task12.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task13.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task14.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task15.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task16.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task7.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task_8.executor&quot;: &quot;Run&quot;,
-    &quot;Python.teacher_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tic tac toe.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/pythonProject_task_1/my_Django_project/myapp&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.about_dictionary.executor": "Run",
+    "Python.add_book.executor": "Run",
+    "Python.borrow.executor": "Run",
+    "Python.camparison_of_values.executor": "Run",
+    "Python.car_liecence_detection.executor": "Run",
+    "Python.classes (1).executor": "Run",
+    "Python.data_science_task.executor": "Run",
+    "Python.diff_shape_arrows.executor": "Run",
+    "Python.eception.executor": "Run",
+    "Python.examples.executor": "Run",
+    "Python.fatima_exam.executor": "Run",
+    "Python.filehandling.executor": "Run",
+    "Python.folders_main.executor": "Run",
+    "Python.for loop.executor": "Run",
+    "Python.funjction.executor": "Run",
+    "Python.instance_basic.executor": "Run",
+    "Python.instance_variable.executor": "Run",
+    "Python.iota.executor": "Run",
+    "Python.iotamain.executor": "Run",
+    "Python.letter_histogram.executor": "Run",
+    "Python.list.executor": "Run",
+    "Python.lists_in_list.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main (2).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.mobile pakages demo.executor": "Run",
+    "Python.module.executor": "Run",
+    "Python.navtcc_exam.executor": "Run",
+    "Python.object_detection.executor": "Run",
+    "Python.object_detection_task2.executor": "Run",
+    "Python.os_tasks.executor": "Run",
+    "Python.password_checking.executor": "Run",
+    "Python.practice_tasks.executor": "Run",
+    "Python.recursion.executor": "Run",
+    "Python.return_function (1).executor": "Run",
+    "Python.scratch.executor": "Run",
+    "Python.sort_list.executor": "Run",
+    "Python.ssd_coco.executor": "Run",
+    "Python.student_data.executor": "Run",
+    "Python.task10.executor": "Run",
+    "Python.task12.executor": "Run",
+    "Python.task13.executor": "Run",
+    "Python.task14.executor": "Run",
+    "Python.task15.executor": "Run",
+    "Python.task16.executor": "Run",
+    "Python.task19.executor": "Run",
+    "Python.task20.executor": "Run",
+    "Python.task22.executor": "Run",
+    "Python.task3.executor": "Run",
+    "Python.task4.executor": "Run",
+    "Python.task5.executor": "Run",
+    "Python.task6.executor": "Run",
+    "Python.task7.executor": "Run",
+    "Python.task_1.executor": "Run",
+    "Python.task_8.executor": "Run",
+    "Python.task_exeption.executor": "Run",
+    "Python.teacher_data.executor": "Run",
+    "Python.testing_for_project.executor": "Run",
+    "Python.tic tac toe.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Hp/pythonProject_task_1/navttc_class_tasks",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Hp\pythonProject_task_1\my_Django_project\myapp" />
       <recent name="C:\Users\Hp\pythonProject_task_1\navttc_class_tasks" />
+      <recent name="C:\Users\Hp\pythonProject_task_1\my_Django_project\myapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hp\pythonProject_task_1\newlibrarymanagmentproject" />
@@ -108,8 +129,8 @@
       <recent name="C:\Users\Hp\pythonProject_task_1\navttc_class_tasks\folder1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.task15">
-    <configuration name="classes (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.object_detection">
+    <configuration name="fatima_exam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,11 +139,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/classes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fatima_exam.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="classes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="navtcc_exam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,11 +161,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/navttc_class_tasks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Hp\pythonProject_task_1\navttc_class_tasks\classes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navtcc_exam.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,7 +174,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="task14" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="object_detection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,7 +187,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task14.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/object_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,7 +196,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="task15" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="os_tasks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,7 +209,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task15.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/os_tasks.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,7 +218,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="task16" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="practice_tasks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject_task_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -210,7 +231,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task16.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/practice_tasks.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.task15" />
-        <item itemvalue="Python.task16" />
-        <item itemvalue="Python.classes (1)" />
-        <item itemvalue="Python.classes" />
-        <item itemvalue="Python.task14" />
+        <item itemvalue="Python.object_detection" />
+        <item itemvalue="Python.navtcc_exam" />
+        <item itemvalue="Python.fatima_exam" />
+        <item itemvalue="Python.practice_tasks" />
+        <item itemvalue="Python.os_tasks" />
       </list>
     </recent_temporary>
   </component>
@@ -259,6 +280,16 @@
           <url>file://$PROJECT_DIR$/navttc_class_tasks/sort_list.py</url>
           <line>11</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/navttc_class_tasks/os_tasks.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/navttc_class_tasks/practice_tasks.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

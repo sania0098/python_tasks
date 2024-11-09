@@ -1,0 +1,376 @@
+Index: navttc_class_tasks/teacher_evaluation_form.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import tkinter as tk\r\nfrom tkinter import messagebox, ttk\r\nimport os\r\n\r\n\r\n# Function to submit the form data and save to a file\r\ndef submit_form():\r\n    teacher_name = teacher_name_var.get()\r\n    subject = subject_var.get()\r\n\r\n    if not teacher_name or not subject:\r\n        messagebox.showwarning(\"Input Error\", \"Please fill out the Teacher's Name and Subject.\")\r\n        return\r\n\r\n    # Gather selected options\r\n    responses = {\r\n        \"Punctuality\": punctuality_var.get(),\r\n        \"Knowledge\": knowledge_var.get(),\r\n        \"Communication\": communication_var.get(),\r\n        \"Engagement\": engagement_var.get(),\r\n        \"Feedback\": feedback_var.get(),\r\n    }\r\n\r\n    # Create a summary of the evaluation\r\n    summary = f\"Teacher Evaluation Summary\\n----------------------------\\n\"\r\n    summary += f\"Teacher Name: {teacher_name}\\n\"\r\n    summary += f\"Subject: {subject}\\n\\n\"\r\n    for question, response in responses.items():\r\n        summary += f\"{question}: {response}\\n\"\r\n\r\n    # Save the summary to a file on the user's desktop\r\n    desktop_path = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')\r\n    save_path = os.path.join(desktop_path, \"teacher_evaluation.txt\")\r\n    with open(save_path, \"a\") as file:\r\n        file.write(summary + \"\\n\\n\")\r\n\r\n    # Show a confirmation message\r\n    messagebox.showinfo(\"Evaluation Submitted\", f\"Evaluation saved to {save_path}\")\r\n\r\n\r\n# Initialize the main window\r\nroot = tk.Tk()\r\nroot.title(\"Teacher Evaluation Form\")\r\nroot.geometry(\"500x600\")\r\n\r\n# Create a canvas and a scrollbar\r\ncanvas = tk.Canvas(root, bg=\"lightblue\")\r\nscrollbar = ttk.Scrollbar(root, orient=\"vertical\", command=canvas.yview)\r\nscrollable_frame = ttk.Frame(canvas)\r\n\r\nscrollable_frame.bind(\r\n    \"<Configure>\",\r\n    lambda e: canvas.configure(\r\n        scrollregion=canvas.bbox(\"all\")\r\n    )\r\n)\r\n\r\ncanvas.create_window((0, 0), window=scrollable_frame, anchor=\"nw\")\r\ncanvas.configure(yscrollcommand=scrollbar.set)\r\n\r\n# Set the background color for the scrollable frame\r\nscrollable_frame.config(style=\"Custom.TFrame\")\r\n\r\n# Define a style for labels and radio buttons\r\nstyle = ttk.Style()\r\nstyle.configure(\"Custom.TLabel\", background=\"lightblue\", font=(\"Helvetica\", 12, \"bold\"), foreground=\"navy\")\r\nstyle.configure(\"Custom.TRadiobutton\", background=\"lightblue\", font=(\"Helvetica\", 10), foreground=\"black\")\r\nstyle.configure(\"Custom.TFrame\", background=\"lightblue\")\r\n\r\n# Title labels\r\ntitle_font = (\"Helvetica\", 18, \"bold\")\r\ncollege_font = (\"Helvetica\", 14, \"italic\")\r\n\r\nttk.Label(scrollable_frame, text=\"Frontier College and University\", font=college_font, background=\"lightblue\",\r\n          foreground=\"darkred\").pack(anchor='n', pady=(20, 5))\r\nttk.Label(scrollable_frame, text=\"Teacher Evaluation\", font=title_font, background=\"lightblue\", foreground=\"navy\").pack(\r\n    anchor='n', pady=(0, 20))\r\n\r\n# Variables to hold form data\r\nteacher_name_var = tk.StringVar()\r\nsubject_var = tk.StringVar()\r\n\r\n# Initialize variables for radio button selections\r\npunctuality_var = tk.StringVar(value=\"Agree\")\r\nknowledge_var = tk.StringVar(value=\"Agree\")\r\ncommunication_var = tk.StringVar(value=\"Agree\")\r\nengagement_var = tk.StringVar(value=\"Agree\")\r\nfeedback_var = tk.StringVar(value=\"Agree\")\r\n\r\n# Options for radio buttons\r\noptions = [\"Strongly Agree\", \"Agree\", \"Disagree\", \"Strongly Disagree\"]\r\n\r\n# Teacher's Name\r\nttk.Label(scrollable_frame, text=\"Teacher's Name:\", style=\"Custom.TLabel\").pack(anchor='w', padx=10, pady=5)\r\nttk.Entry(scrollable_frame, textvariable=teacher_name_var, width=40).pack(anchor='w', padx=10, pady=5)\r\n\r\n# Subject\r\nttk.Label(scrollable_frame, text=\"Subject:\", style=\"Custom.TLabel\").pack(anchor='w', padx=10, pady=5)\r\nttk.Entry(scrollable_frame, textvariable=subject_var, width=40).pack(anchor='w', padx=10, pady=5)\r\n\r\n# Punctuality\r\nttk.Label(scrollable_frame, text=\"The teacher is punctual:\", style=\"Custom.TLabel\").pack(anchor='w', padx=10, pady=5)\r\nfor option in options:\r\n    ttk.Radiobutton(scrollable_frame, text=option, variable=punctuality_var, value=option,\r\n                    style=\"Custom.TRadiobutton\").pack(anchor='w', padx=20)\r\n\r\n# Knowledge\r\nttk.Label(scrollable_frame, text=\"The teacher has a strong knowledge of the subject:\", style=\"Custom.TLabel\").pack(\r\n    anchor='w', padx=10, pady=5)\r\nfor option in options:\r\n    ttk.Radiobutton(scrollable_frame, text=option, variable=knowledge_var, value=option,\r\n                    style=\"Custom.TRadiobutton\").pack(anchor='w', padx=20)\r\n\r\n# Communication\r\nttk.Label(scrollable_frame, text=\"The teacher communicates effectively:\", style=\"Custom.TLabel\").pack(anchor='w',\r\n                                                                                                      padx=10, pady=5)\r\nfor option in options:\r\n    ttk.Radiobutton(scrollable_frame, text=option, variable=communication_var, value=option,\r\n                    style=\"Custom.TRadiobutton\").pack(anchor='w', padx=20)\r\n\r\n# Engagement\r\nttk.Label(scrollable_frame, text=\"The teacher engages students in learning:\", style=\"Custom.TLabel\").pack(anchor='w',\r\n                                                                                                          padx=10,\r\n                                                                                                          pady=5)\r\nfor option in options:\r\n    ttk.Radiobutton(scrollable_frame, text=option, variable=engagement_var, value=option,\r\n                    style=\"Custom.TRadiobutton\").pack(anchor='w', padx=20)\r\n\r\n# Feedback\r\nttk.Label(scrollable_frame, text=\"The teacher provides constructive feedback:\", style=\"Custom.TLabel\").pack(anchor='w',\r\n                                                                                                            padx=10,\r\n                                                                                                            pady=5)\r\nfor option in options:\r\n    ttk.Radiobutton(scrollable_frame, text=option, variable=feedback_var, value=option,\r\n                    style=\"Custom.TRadiobutton\").pack(anchor='w', padx=20)\r\n\r\n# Submit Button at the bottom of the form\r\nttk.Button(scrollable_frame, text=\"Submit Evaluation\", command=submit_form, style=\"Custom.TLabel\").pack(pady=20)\r\n\r\n# Pack the canvas and scrollbar\r\ncanvas.pack(side=\"left\", fill=\"both\", expand=True)\r\nscrollbar.pack(side=\"right\", fill=\"y\")\r\n\r\n# Start the Tkinter event loop\r\n\r\nroot.mainloop()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/navttc_class_tasks/teacher_evaluation_form.py b/navttc_class_tasks/teacher_evaluation_form.py
+--- a/navttc_class_tasks/teacher_evaluation_form.py	(revision 7615f23386ab6a2cb8433c432e4d5f959e3532ff)
++++ b/navttc_class_tasks/teacher_evaluation_form.py	(date 1725883276884)
+@@ -2,6 +2,7 @@
+ from tkinter import messagebox, ttk
+ import os
+ 
++#Test
+ 
+ # Function to submit the form data and save to a file
+ def submit_form():
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a417451f-e3f1-412f-ba61-abb4f2336c7b\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/navttc_class_tasks/task14.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/inventory.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/invention.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/newlibrarymanagmentproject/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/newlibrarymanagmentproject/main.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/navttc_class_tasks/car_liecence_detection.py\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2je9t9UZflyHWv1QgzPKDnvbPir\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;Python.about_dictionary.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.add_book.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.borrow.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.camparison_of_values.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.car_liecence_detection.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.classes (1).executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.data_science_task.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.diff_shape_arrows.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.eception.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.examples.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.folders_main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.for loop.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.funjction.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.iota.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.iotamain.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.list.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.lists_in_list.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.mobile pakages demo.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.module.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.object_detection.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.object_detection_task2.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.password_checking.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.return_function (1).executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.sort_list.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.ssd_coco.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.student_data.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task10.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task12.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task13.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task14.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task15.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task16.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task3.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task4.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task5.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task6.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task7.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.task_8.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.teacher_data.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.tic tac toe.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/pythonProject_task_1/my_Django_project/myapp&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Hp\\pythonProject_task_1\\my_Django_project\\myapp\" />\r\n      <recent name=\"C:\\Users\\Hp\\pythonProject_task_1\\navttc_class_tasks\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Hp\\pythonProject_task_1\\newlibrarymanagmentproject\" />\r\n      <recent name=\"C:\\Users\\Hp\\pythonProject_task_1\\navttc_class_tasks\\folders\" />\r\n      <recent name=\"C:\\Users\\Hp\\pythonProject_task_1\\navttc_class_tasks\\folder2\" />\r\n      <recent name=\"C:\\Users\\Hp\\pythonProject_task_1\\navttc_class_tasks\\folder1\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.task15\">\r\n    <configuration name=\"classes (1)\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pythonProject_task_1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/navttc_class_tasks\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/navttc_class_tasks/classes.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"classes\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pythonProject_task_1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/navttc_class_tasks\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"C:\\Users\\Hp\\pythonProject_task_1\\navttc_class_tasks\\classes.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"task14\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pythonProject_task_1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/navttc_class_tasks\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/navttc_class_tasks/task14.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"task15\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pythonProject_task_1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/navttc_class_tasks\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/navttc_class_tasks/task15.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"task16\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pythonProject_task_1\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/navttc_class_tasks\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/navttc_class_tasks/task16.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.task15\" />\r\n        <item itemvalue=\"Python.task16\" />\r\n        <item itemvalue=\"Python.classes (1)\" />\r\n        <item itemvalue=\"Python.classes\" />\r\n        <item itemvalue=\"Python.task14\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a417451f-e3f1-412f-ba61-abb4f2336c7b\" name=\"Changes\" comment=\"\" />\r\n      <created>1721736888482</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1721736888482</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/navttc_class_tasks/mobile pakages demo.py</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/navttc_class_tasks/sort_list.py</url>\r\n          <line>11</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 69dfd1f1d7fd891ad5ab24d88cc6174f7a5e6a82)
++++ b/.idea/workspace.xml	(date 1725979944881)
+@@ -4,14 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a417451f-e3f1-412f-ba61-abb4f2336c7b" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/navttc_class_tasks/task14.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/inventory.py" afterDir="false" />
++    <list default="true" id="a417451f-e3f1-412f-ba61-abb4f2336c7b" name="Changes" comment="adding readme file">
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/borrow_operation/borrow.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/inventory_operation/invention.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/main.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py" beforeDir="false" afterPath="$PROJECT_DIR$/newlibrarymanagmentproject/return_operation/return.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/navttc_class_tasks/teacher_evaluation_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/navttc_class_tasks/teacher_evaluation_form.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -27,7 +23,7 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/navttc_class_tasks" />
+   </component>
+   <component name="HighlightingSettingsPerFile">
+     <setting file="file://$PROJECT_DIR$/navttc_class_tasks/car_liecence_detection.py" root0="FORCE_HIGHLIGHTING" />
+@@ -41,61 +37,66 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;Python.about_dictionary.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.add_book.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.borrow.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.camparison_of_values.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.car_liecence_detection.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.classes (1).executor&quot;: &quot;Run&quot;,
+-    &quot;Python.data_science_task.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.diff_shape_arrows.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.eception.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.examples.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.folders_main.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.for loop.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.funjction.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.iota.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.iotamain.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.list.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.lists_in_list.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+-    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.mobile pakages demo.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.module.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.object_detection.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.object_detection_task2.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.password_checking.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.return_function (1).executor&quot;: &quot;Run&quot;,
+-    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.sort_list.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.ssd_coco.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.student_data.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task10.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task12.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task13.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task14.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task15.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task16.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task3.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task4.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task5.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task6.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task7.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task_1.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.task_8.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.teacher_data.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.tic tac toe.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/pythonProject_task_1/my_Django_project/myapp&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "DefaultHtmlFileTemplate": "HTML File",
++    "Python.GUI_task.executor": "Run",
++    "Python.about_dictionary.executor": "Run",
++    "Python.add_book.executor": "Run",
++    "Python.borrow.executor": "Run",
++    "Python.camparison_of_values.executor": "Run",
++    "Python.car_liecence_detection.executor": "Run",
++    "Python.classes (1).executor": "Run",
++    "Python.create_Form_GUI_.executor": "Run",
++    "Python.data_science_task.executor": "Run",
++    "Python.diff_shape_arrows.executor": "Run",
++    "Python.eception.executor": "Run",
++    "Python.examples.executor": "Run",
++    "Python.folders_main.executor": "Run",
++    "Python.for loop.executor": "Run",
++    "Python.funjction.executor": "Run",
++    "Python.iota.executor": "Run",
++    "Python.iotamain.executor": "Run",
++    "Python.list.executor": "Run",
++    "Python.lists_in_list.executor": "Run",
++    "Python.main (1).executor": "Run",
++    "Python.main (2).executor": "Run",
++    "Python.main.executor": "Run",
++    "Python.mobile pakages demo.executor": "Run",
++    "Python.module.executor": "Run",
++    "Python.my_GUL_app_project.executor": "Run",
++    "Python.object_detection.executor": "Run",
++    "Python.object_detection_task2.executor": "Run",
++    "Python.password_checking.executor": "Run",
++    "Python.recursion.executor": "Run",
++    "Python.return_function (1).executor": "Run",
++    "Python.scratch.executor": "Run",
++    "Python.sort_list.executor": "Run",
++    "Python.ssd_coco.executor": "Run",
++    "Python.student_data.executor": "Run",
++    "Python.task10.executor": "Run",
++    "Python.task12.executor": "Run",
++    "Python.task13.executor": "Run",
++    "Python.task14.executor": "Run",
++    "Python.task15.executor": "Run",
++    "Python.task16.executor": "Run",
++    "Python.task19.executor": "Run",
++    "Python.task3.executor": "Run",
++    "Python.task4.executor": "Run",
++    "Python.task5.executor": "Run",
++    "Python.task6.executor": "Run",
++    "Python.task7.executor": "Run",
++    "Python.task_1.executor": "Run",
++    "Python.task_8.executor": "Run",
++    "Python.teacher_data.executor": "Run",
++    "Python.teacher_evaluation_form.executor": "Run",
++    "Python.tic tac toe.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "last_opened_file_path": "C:/Users/Hp/pythonProject_task_1/my_Django_project/myapp",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\Hp\pythonProject_task_1\my_Django_project\myapp" />
+@@ -108,8 +109,8 @@
+       <recent name="C:\Users\Hp\pythonProject_task_1\navttc_class_tasks\folder1" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Python.task15">
+-    <configuration name="classes (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Python.task19">
++    <configuration name="GUI_task" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="pythonProject_task_1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -122,7 +123,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/classes.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/GUI_task.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -131,7 +132,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="classes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="create_Form_GUI_" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="pythonProject_task_1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -144,7 +145,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="C:\Users\Hp\pythonProject_task_1\navttc_class_tasks\classes.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/create_Form_GUI_.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -153,7 +154,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="task14" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="my_GUL_app_project" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="pythonProject_task_1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -166,7 +167,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task14.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/my_GUL_app_project.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -175,7 +176,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="task15" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="task19" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="pythonProject_task_1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -188,7 +189,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task15.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task19.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -197,7 +198,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="task16" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="teacher_evaluation_form" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="pythonProject_task_1" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -210,7 +211,7 @@
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/task16.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navttc_class_tasks/teacher_evaluation_form.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -221,11 +222,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Python.task15" />
+-        <item itemvalue="Python.task16" />
+-        <item itemvalue="Python.classes (1)" />
+-        <item itemvalue="Python.classes" />
+-        <item itemvalue="Python.task14" />
++        <item itemvalue="Python.task19" />
++        <item itemvalue="Python.teacher_evaluation_form" />
++        <item itemvalue="Python.my_GUL_app_project" />
++        <item itemvalue="Python.create_Form_GUI_" />
++        <item itemvalue="Python.GUI_task" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -245,7 +246,72 @@
+       <option name="presentableId" value="Default" />
+       <updated>1721736888482</updated>
+     </task>
++    <task id="LOCAL-00001" summary="test">
++      <option name="closed" value="true" />
++      <created>1725878161619</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1725878161619</updated>
++    </task>
++    <task id="LOCAL-00002" summary="testing commit">
++      <option name="closed" value="true" />
++      <created>1725883454396</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1725883454396</updated>
++    </task>
++    <task id="LOCAL-00003" summary="testing new commit">
++      <option name="closed" value="true" />
++      <created>1725883751797</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1725883751797</updated>
++    </task>
++    <task id="LOCAL-00004" summary="adding readme file">
++      <option name="closed" value="true" />
++      <created>1725884185803</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1725884185804</updated>
++    </task>
++    <task id="LOCAL-00005" summary="adding readme file">
++      <option name="closed" value="true" />
++      <created>1725884251532</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1725884251532</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="TEXT_FILTER_SETTINGS">
++                <TextFilterSettings>
++                  <option name="REGEX" value="true" />
++                </TextFilterSettings>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="test" />
++    <MESSAGE value="testing commit" />
++    <MESSAGE value="testing new commit" />
++    <MESSAGE value="adding readme file" />
++    <option name="LAST_COMMIT_MESSAGE" value="adding readme file" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 69dfd1f1d7fd891ad5ab24d88cc6174f7a5e6a82)
++++ b/.idea/vcs.xml	(date 1725876457015)
+@@ -2,5 +2,6 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="$PROJECT_DIR$/navttc_class_tasks" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
